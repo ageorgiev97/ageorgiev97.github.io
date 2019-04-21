@@ -9,7 +9,7 @@
         var myOptions = {
             zoom: 6,
             center: center,
-            mapTypeId: google.maps.MapTypeId.SATELLITE
+            mapTypeId: google.maps.MapTypeId.HYBRID
         };
         map = new google.maps.Map(document.getElementById("temperature_map"), myOptions);
         set_data(0);
