@@ -21,6 +21,7 @@
     
         var img = document.createElement('img');
         img.src = this.image_;
+        img.style.imageRendering = 'pixelated';
         img.style.width = '100%';
         img.style.height = '100%';
         div.appendChild(img);
@@ -118,10 +119,9 @@
         map = new google.maps.Map(document.getElementById("temperature_map"), myOptions);
         set_data(0);
         
-        $("#temperature_slider").slider({});
-        
         $("#temperature_slider").slider('setAttribute', 'max', get_map_count());
         $("#temperature_slider").slider('setAttribute', 'value', 0);
+
         $("#temperature_slider").slider('refresh');
         
         $("#temperature_slider").slider().change(function(ev)
